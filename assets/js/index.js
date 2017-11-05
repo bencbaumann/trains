@@ -6,6 +6,7 @@ $('#submit').on('click', function(e){
        var train = {};
        $('#trainform').serializeArray().map((x)=>{train[x.name] = x.value;}); 
        db.ref().push(train);
+       $("input").val("");
 });
 
 // Firebase watcher + initial loader HINT: This code behaves similarly to .on("value")
